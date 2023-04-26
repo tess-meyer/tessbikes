@@ -2,6 +2,7 @@ import './App.css';
 import LandingPage from './components/Landing';
 import ProductList from './components/ProductList';
 import About from './components/About';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <LandingPage/>
       <ProductList/>
       <About/>
+      <Footer/>
     </div>
   );
 }
