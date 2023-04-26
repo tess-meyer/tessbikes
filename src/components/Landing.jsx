@@ -25,12 +25,12 @@ const LandingPage = () => {
         <div className="max-w-7xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-              Bike Bags for Every Adventure
+              Re<span className="text-indigo-600">cycle</span>d Bike Bags for Every Adventure
             </h2>
             <p className="mt-4 text-lg text-gray-900">
-              Whether you're commuting to work or embarking on a multi-day tour,
+              Whether you're commuting to work or embarking on a world tour,
               we have the perfect bike bag to meet your needs. Our bags are
-              designed to be durable, weather-resistant, and stylish.
+              designed to be durable, weather-resistant, and uniqely yours.
             </p>
             <div className="mt-8 space-y-4 sm:space-y-0 sm:flex sm:justify-center sm:space-x-6">
               <div className="rounded-md shadow">
