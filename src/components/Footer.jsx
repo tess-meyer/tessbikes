@@ -3,7 +3,7 @@ import { FaEnvelope, FaInstagram, FaYoutube } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="bg-indigo-400 text-white py-4">
+    <footer className="bg-indigo-900 text-white py-4">
       <div className="container mx-auto flex justify-center items-center">
         <div className="flex items-center">
           <a href="mailto:info.tessbikes@gmail.com" className="mr-4">

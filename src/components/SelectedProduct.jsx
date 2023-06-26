@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import Cart from "./Cart";
 
 const SelectedProduct = ({ product, addToCart, onClose }) => {
   useEffect(() => {
@@ -26,7 +27,7 @@ const SelectedProduct = ({ product, addToCart, onClose }) => {
             Close
           </button>
           <button className="bg-indigo-600 hover:bg-indigo-500 text-white py-2 px-4 rounded-full" onClick={addToCart}>
-            Add to cart
+            Preorder
           </button>
         </div>
       </div>

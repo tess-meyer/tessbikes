@@ -1,58 +1,45 @@
-import React from 'react';
-import backgroundImage from '../bike.jpeg'
+import React from "react";
+import logo from "../tess-logo.svg";
+import backgroundImg from "../bg.jpeg";
 
 const LandingPage = () => {
-
-  const handleShopScroll = () => {
-    const element = document.getElementById('shop');
-    if (element) {
-      // 👇 Will scroll smoothly to the top of the next section
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
-
-  const handleAboutScroll = () => {
-    const element = document.getElementById('about');
-    if (element) {
-      // 👇 Will scroll smoothly to the top of the next section
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
-
   return (
-    <div className="h-screen bg-cover bg-center" style={{backgroundImage: `url(${backgroundImage})`}}>
-      <div className="flex h-full justify-center items-center bg-gray-100 bg-opacity-70">
-        <div className="max-w-7xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-              Re<span className="text-indigo-600">cycle</span>d Bike Bags for Every Adventure
-            </h2>
-            <p className="mt-4 text-lg text-gray-900">
-              Whether you're commuting to work or embarking on a world tour,
-              we have the perfect bike bag to meet your needs. Our bags are
-              designed to be durable, weather-resistant, and uniqely yours.
-            </p>
-            <div className="mt-8 space-y-4 sm:space-y-0 sm:flex sm:justify-center sm:space-x-6">
-              <div className="rounded-md shadow">
-                <a
-                  onClick={handleShopScroll}
-                  className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
-                >
-                  Shop Now
-                </a>
-              </div>
-              <div className="rounded-md shadow">
-                <a
-                  onClick={handleAboutScroll}
-                  className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10"
-                >
-                  Learn More
-                </a>
-              </div>
+    <div className="flex flex-col h-screen">
+      <div
+        className="h-1/2 relative"
+        style={{
+          backgroundImage: `url(${backgroundImg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 flex items-end">
+          <div className="h-3/4 w-full bg-gradient-to-t from-indigo-900 to-transparent"></div>
+        </div>
+        <div className="flex justify-between p-4 absolute top-0 left-0 w-full">
+          <div className="flex items-center">
+            <div className="mr-2">
+              <img src={logo} alt="Logo" className="max-w-xs max-h-36" />
             </div>
+          </div>
+          <div className="flex items-baseline">
+            <button className="text-white hover:text-gray-300">
+              <svg
+                className="h-6 w-6 fill-current"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M4 7h16a1 1 0 010 2H4a1 1 0 010-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </button>
           </div>
         </div>
       </div>
+      <div className="h-1/2 bg-indigo-900"></div>
     </div>
   );
 };
