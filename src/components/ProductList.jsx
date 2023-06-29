@@ -3,9 +3,9 @@ import Product from "./Product";
 import SelectedProduct from "./SelectedProduct";
 import Cart from "./Cart";
 // assets
-import upcycled from "../upcycled.png";
 import custom from "../custom.jpeg";
-import rig from "../rig.webp";
+import bag from "../bag.jpeg";
+import beeswax from "../beeswax.avif";
 
 const placeholderDescription1 =
   "Bespoke, made to fit your bike. Handmade in Berlin with love from locally sourced preloved materials. Perfect for around town or shorter fine-weather tours. Free repairs for your first 3 months.";
@@ -18,21 +18,21 @@ const products = [
   {
     id: 1,
     name: "Custom Upcycled Frame Bag",
-    imageSrc: `${upcycled}`,
-    price: 69.99,
+    imageSrc: `${custom}`,
+    price: 89.99,
     description: placeholderDescription1,
   },
   {
     id: 2,
-    name: "Custom Waterproof Frame Bag",
-    imageSrc: `${custom}`,
-    price: 109.99,
+    name: "Custom Water Resistant Frame Bag",
+    imageSrc: `${bag}`,
+    price: 129.99,
     description: placeholderDescription2,
   },
   {
     id: 3,
     name: "Beeswax Wraps",
-    imageSrc: `${rig}`,
+    imageSrc: `${beeswax}`,
     price: 9.99,
     description: placeholderDescription3,
   },

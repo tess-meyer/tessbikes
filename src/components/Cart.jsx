@@ -51,7 +51,7 @@ const Cart = ({ items }) => {
                 />
                 <div className="flex-1">
                   <h3 className="font-bold">{item.name}</h3>
-                  <p>${(item.price * item.quantity).toFixed(2)}</p>
+                  <p>€{(item.price * item.quantity).toFixed(2)}</p>
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700">
@@ -94,7 +94,7 @@ const Cart = ({ items }) => {
               <div className="flex-1" />
               <div>
                 <h3 className="font-bold">Total:</h3>
-                <p>${getTotalPrice().toFixed(2)}</p>
+                <p>€{getTotalPrice().toFixed(2)}</p>
               </div>
               <div className="ml-4">
                 <button className="bg-indigo-600 text-white py-2 px-4 rounded-full">

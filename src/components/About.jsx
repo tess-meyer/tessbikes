@@ -6,10 +6,10 @@ const About = () => {
     <div className="rounded-lg shadow-lg px-4 py-4 sm:p-6" id="about">
       <div className="sm:flex sm:flex-row sm:justify-between sm:items-center">
         <div className="sm:w-1/2 sm:pr-6 pb-3">
-          <h2 className="text-2xl font-bold mb-4">About Tess Bikes</h2>
+          <h2 className="text-2xl font-bold mb-4">About Tess</h2>
           <p className="text-gray-900 leading-relaxed">
-            Tess is a cyclist and bike mechanic from Wellington, New
-            Zealand based in Berlin. She is 8,300km through cycling around the
+            Tess is from Wellington, New
+            Zealand, currently based in Berlin. She is 8,300km through cycling around the
             world and has found a passion for creating beautiful, functional,
             upcycled bike kit. With 4 years of experience bikepacking, Tess is a
             trusted resource for all things bike-travel-related.
