@@ -11,8 +11,8 @@ const placeholderDescription1 =
   "Bespoke, made to fit your bike. Handmade in Berlin with love from locally sourced preloved materials. Perfect for around town or shorter fine-weather tours. Free repairs for your first 3 months.";
 const placeholderDescription2 =
   "Need something more sturdy for a longer tour? I understand. Water resistant, durable, bikepacker approved. Complete with a small repair kit for when the going gets really tough. Handmade in Berlin with love.";
-// const placeholderDescription3 =
-//   "Eliminate plastic from your life. Perfect for anything you would once have used plastic wrap for. Handmade in Berlin with love.";
+const placeholderDescription3 =
+  "Eliminate plastic from your life. Perfect for anything you would once have used plastic wrap for. Handmade in Berlin with love.";
 
 const products = [
   {
@@ -29,13 +29,13 @@ const products = [
     price: 149.99,
     description: placeholderDescription2,
   },
-  // {
-  //   id: 3,
-  //   name: "Beeswax Wraps",
-  //   imageSrc: `${beeswax}`,
-  //   price: 9.99,
-  //   description: placeholderDescription3,
-  // },
+  {
+    id: 3,
+    name: "Coming Soon! Beeswax Wraps",
+    imageSrc: `${beeswax}`,
+    price: 9.99,
+    description: placeholderDescription3,
+  },
 ];
 
 const ProductList = () => {
