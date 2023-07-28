@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import SizeTool from "../size-bike.jpeg"
+import SizeTool from "../size-bike.jpeg";
 
 const PreorderForm = ({ onClose }) => {
   const [step, setStep] = useState(1);
@@ -17,17 +17,7 @@ const PreorderForm = ({ onClose }) => {
   const [phoneError, setPhoneError] = useState("");
   const [sizeHelpVisible, setSizeHelpVisible] = useState(false);
 
-  const bikeDetails = [
-    name,
-    phone,
-    country,
-    bikeType,
-    frameSize,
-    topTube,
-    seatTube,
-    downTube,
-    headTube
-  ]
+  const orderDetails = [name, email, phone, country, bikeType, frameSize, topTube, downTube, headTube]
 
   const validateEmail = (email) => {
     // Regular expression for email validation
@@ -71,8 +61,7 @@ const PreorderForm = ({ onClose }) => {
   const handleSubmit = (event) => {
     event.stopPropagation();
     if (step === 2) {
-      console.log("Order submitted", bikeDetails);
-      onClose();
+      setStep(3);
     }
   };
 
@@ -134,7 +123,9 @@ const PreorderForm = ({ onClose }) => {
                 placeholder="example@example.com"
                 className="block w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-indigo-500"
               />
-              {emailError && <p className="text-red-500 text-sm">{emailError}</p>}
+              {emailError && (
+                <p className="text-red-500 text-sm">{emailError}</p>
+              )}
             </div>
             <div className="mb-4">
               <label
@@ -151,7 +142,9 @@ const PreorderForm = ({ onClose }) => {
                 placeholder="+49 1234 5678"
                 className="block w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-indigo-500"
               />
-              {phoneError && <p className="text-red-500 text-sm">{phoneError}</p>}
+              {phoneError && (
+                <p className="text-red-500 text-sm">{phoneError}</p>
+              )}
             </div>
             <div className="mb-4">
               <label
@@ -233,34 +226,39 @@ const PreorderForm = ({ onClose }) => {
                 >
                   Top Tube (cm)
                   <span
-              className={`question-mark ${sizeHelpVisible ? "active" : ""}`}
-              onClick={setSizeHelpVisible}            >
-              ?
-            </span>
-            {sizeHelpVisible && (
-        <div className="modal fixed inset-0 flex justify-center items-center">
-          <div className="modal-content bg-white rounded-lg p-4 md:p-8">
-            <h2 className="text-xl font-bold text-center font-custom">Size Help</h2>
-            <div className="mb-4">
-              <img
-                src={SizeTool}
-                alt="Bike Size"
-                className="modal-image"
-              />
-              <p className="modal-text">
-                Please provide as much information as you can.
-              </p>
-            </div>
-            <button
-              type="button"
-              className="bg-indigo-600 hover:bg-indigo-500 text-white py-2 px-4 rounded-full font-custom"
-              onClick={toggleSizeHelp}
-            >
-              Okay
-            </button>
-          </div>
-        </div>
-      )}
+                    className={`question-mark ${
+                      sizeHelpVisible ? "active" : ""
+                    }`}
+                    onClick={setSizeHelpVisible}
+                  >
+                    ?
+                  </span>
+                  {sizeHelpVisible && (
+                    <div className="modal fixed inset-0 flex justify-center items-center">
+                      <div className="modal-content bg-white rounded-lg p-4 md:p-8">
+                        <h2 className="text-xl font-bold text-center font-custom">
+                          Size Help
+                        </h2>
+                        <div className="mb-4">
+                          <img
+                            src={SizeTool}
+                            alt="Bike Size"
+                            className="modal-image"
+                          />
+                          <p className="modal-text">
+                            Please provide as much information as you can.
+                          </p>
+                        </div>
+                        <button
+                          type="button"
+                          className="bg-indigo-600 hover:bg-indigo-500 text-white py-2 px-4 rounded-full font-custom"
+                          onClick={toggleSizeHelp}
+                        >
+                          Okay
+                        </button>
+                      </div>
+                    </div>
+                  )}
                 </label>
                 <input
                   type="number"
@@ -330,6 +328,26 @@ const PreorderForm = ({ onClose }) => {
                 onClick={handleSubmit}
               >
                 Order Now
+              </button>
+            </div>
+          </>
+        )}
+        {step === 3 && (
+          <>
+            <h2 className="text-xl font-bold text-center font-custom mb-4">
+              Thank you for being an early supporter!
+            </h2>
+            <p className="text-center font-custom mb-4">
+              Your order has been received. I will be in touch within 5 working days to confirm the specs. 
+            </p>
+            <p className ="text-center font-custom">Happy riding 🤟</p>
+            <div className="flex justify-center mt-4">
+              <button
+                type="button"
+                className="bg-gray-400 hover:bg-gray-500 text-white py-2 px-8 rounded-full font-custom"
+                onClick={onClose}
+              >
+                Close
               </button>
             </div>
           </>
