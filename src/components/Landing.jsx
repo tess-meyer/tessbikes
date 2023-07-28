@@ -69,7 +69,7 @@ const LandingPage = () => {
           smooth={true}
           duration={500}
           >
-            <button class="bg-teal-500 hover:bg-teal-700 text-white text-xl font-custom py-2 px-4 ml-4 mt-4 cursor-pointer lg:text-4xl">
+            <button class="bg-teal-500 hover:bg-teal-400 text-white text-xl font-custom py-2 px-4 ml-4 mt-4 cursor-pointer lg:text-4xl">
               SHOP BAGS
             </button>
           </Link>

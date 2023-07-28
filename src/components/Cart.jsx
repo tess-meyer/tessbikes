@@ -97,7 +97,7 @@ const Cart = ({ items }) => {
                 <p>€{getTotalPrice().toFixed(2)}</p>
               </div>
               <div className="ml-4">
-                <button className="bg-indigo-600 text-white py-2 px-4 rounded-full">
+                <button className="bg-teal-500 hover:bg-teal-400 text-white py-2 px-4 rounded-full">
                   Checkout
                 </button>
               </div>

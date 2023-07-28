@@ -17,18 +17,15 @@ const SelectedProduct = ({ product, addToCart, onClose }) => {
     return () => window.removeEventListener('click', handleClickOutside);
   }, [onClose]);
 
-  const openPreorderForm = () => {
-    setShowPreorderForm(true);
+  const togglePreorderForm = () => {
+    setShowPreorderForm(!showPreorderForm);
   };
 
-  const closePreorderForm = () => {
-    setShowPreorderForm(false);
-  };
 
   return (
     <div className="fixed inset-0 bg-gray-500 bg-opacity-75 flex justify-center items-center px-4">
       {showPreorderForm ? (
-        <PreorderForm onClose={closePreorderForm} />
+        <PreorderForm onClose={togglePreorderForm} />
       ) : (
         <div className="selected-product bg-white rounded-lg p-4 md:p-8">
           <img
@@ -48,8 +45,8 @@ const SelectedProduct = ({ product, addToCart, onClose }) => {
               Close
             </button>
             <button
-              className="bg-indigo-600 hover:bg-indigo-500 text-white py-2 px-4 rounded-full"
-              onClick={openPreorderForm}
+              className="bg-teal-500 hover:bg-teal-400 text-white py-2 px-4 rounded-full"
+              onClick={togglePreorderForm}
             >
               Preorder
             </button>
