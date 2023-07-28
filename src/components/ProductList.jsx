@@ -10,7 +10,7 @@ import beeswax from "../beeswax.avif";
 const placeholderDescription1 =
   "Bespoke, made to fit your bike. Handmade in Berlin with love from locally sourced preloved materials. Perfect for around town or shorter fine-weather tours. Free repairs for your first 3 months.";
 const placeholderDescription2 =
-  "Need something more sturdy for a longer tour? I understand. Water resistant, durable, bikepacker approved. Complete with a small repair kit for when the going gets really tough. Handmade in Berlin with love.";
+  "Need something more sturdy for a longer tour? Lucky you! Water resistant, durable, bikepacker approved. Complete with a small repair kit for when the going gets really tough. Handmade in Berlin with love.";
 const placeholderDescription3 =
   "Eliminate plastic from your life. Perfect for anything you would once have used plastic wrap for. Handmade in Berlin with love.";
 
