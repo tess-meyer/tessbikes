@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import SizeTool from "../size-bike.jpeg";
+import emailjs from "emailjs-com"
 
 const sendJsPublicKey = process.env.REACT_APP_EMAILJS_PUBLICKEY;
 // Use `sendJsPublicKey` in your email setup or wherever it's needed in your code, this pulls the github secret where it's stored during build.
@@ -19,8 +20,6 @@ const PreorderForm = ({ onClose }) => {
   const [emailError, setEmailError] = useState("");
   const [phoneError, setPhoneError] = useState("");
   const [sizeHelpVisible, setSizeHelpVisible] = useState(false);
-
-  const orderDetails = [name, email, phone, country, bikeType, frameSize, topTube, downTube, headTube]
 
   const validateEmail = (email) => {
     // Regular expression for email validation
@@ -64,9 +63,42 @@ const PreorderForm = ({ onClose }) => {
   const handleSubmit = (event) => {
     event.stopPropagation();
     if (step === 2) {
+
+      // Send orderDetails using emailjs
+      const serviceId = "service_8mrf66p";
+      const templateId = "template_l0bd10n";
+      const userId = sendJsPublicKey;
+
+      // Prepare the data to be sent in the email
+      const templateParams = {
+        to_email: "info@tessbikes.com", // Replace this with your recipient email address
+        from_name: name,
+        from_email: email,
+        phone_number: phone,
+        country_name: country,
+        bike_type: bikeType,
+        frame_size: frameSize,
+        top_tube: topTube,
+        seat_tube: seatTube,
+        down_tube: downTube,
+        head_tube: headTube,
+      };
+
+      // Send the data using emailjs
+      emailjs.send(serviceId, templateId, templateParams, userId).then(
+        (response) => {
+          console.log("Email sent successfully:", response);
+          setStep(3); // Move to the next step after successful email sending
+        },
+        (error) => {
+          console.error("Error sending email:", error);
+          // Handle the error here (e.g., show a user-friendly message)
+        }
+      );
+    }
       setStep(3);
     }
-  };
+
 
   const toggleSizeHelp = () => {
     setSizeHelpVisible(!sizeHelpVisible);
@@ -175,7 +207,7 @@ const PreorderForm = ({ onClose }) => {
               </button>
               <button
                 type="button"
-                className="bg-indigo-600 hover:bg-indigo-500 text-white py-2 px-4 rounded-full font-custom"
+                className="bg-teal-500 hover:bg-teal-400 text-white py-2 px-4 rounded-full font-custom"
                 onClick={handleContinue}
               >
                 Continue
@@ -254,7 +286,7 @@ const PreorderForm = ({ onClose }) => {
                         </div>
                         <button
                           type="button"
-                          className="bg-indigo-600 hover:bg-indigo-500 text-white py-2 px-4 rounded-full font-custom"
+                          className="bg-teal-500 hover:bg-teal-400 text-white py-2 px-4 rounded-full font-custom"
                           onClick={toggleSizeHelp}
                         >
                           Okay
@@ -327,7 +359,7 @@ const PreorderForm = ({ onClose }) => {
               </button>
               <button
                 type="button"
-                className="bg-indigo-600 hover:bg-indigo-500 text-white py-2 px-4 rounded-full font-custom"
+                className="bg-teal-500 hover:bg-teal-400 text-white py-2 px-4 rounded-full font-custom"
                 onClick={handleSubmit}
               >
                 Order Now
