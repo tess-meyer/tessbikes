@@ -66,7 +66,7 @@ const ProductList = () => {
 
   return (
     <div
-      className="my-4 mx-2 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3"
+      className="my-4 mx-2 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 cursor-pointer"
       id="shop"
     >
       {products.map((product) => (
