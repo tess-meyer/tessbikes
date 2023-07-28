@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import SizeTool from "../size-bike.jpeg";
 
+const sendJsPublicKey = process.env.REACT_APP_EMAILJS_PUBLICKEY;
+// Use `sendJsPublicKey` in your email setup or wherever it's needed in your code, this pulls the github secret where it's stored during build.
+
 const PreorderForm = ({ onClose }) => {
   const [step, setStep] = useState(1);
   const [name, setName] = useState("");
