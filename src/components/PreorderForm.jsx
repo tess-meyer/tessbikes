@@ -17,6 +17,18 @@ const PreorderForm = ({ onClose }) => {
   const [phoneError, setPhoneError] = useState("");
   const [sizeHelpVisible, setSizeHelpVisible] = useState(false);
 
+  const bikeDetails = [
+    name,
+    phone,
+    country,
+    bikeType,
+    frameSize,
+    topTube,
+    seatTube,
+    downTube,
+    headTube
+  ]
+
   const validateEmail = (email) => {
     // Regular expression for email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -59,7 +71,7 @@ const PreorderForm = ({ onClose }) => {
   const handleSubmit = (event) => {
     event.stopPropagation();
     if (step === 2) {
-      console.log("Order submitted");
+      console.log("Order submitted", bikeDetails);
       onClose();
     }
   };
