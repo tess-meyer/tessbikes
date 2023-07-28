@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="bg-indigo-900 text-white py-4">
       <div className="container mx-auto flex justify-center items-center">
         <div className="flex items-center">
-          <a href="mailto:info.tessbikes@gmail.com" className="mr-4">
+          <a href="mailto:info@tessbikes.com" className="mr-4">
             <FaEnvelope className="text-white" size={30} />
           </a>
           <a href="https://www.instagram.com/tessbikes/" target="_blank" rel="noreferrer" className="mr-4">
