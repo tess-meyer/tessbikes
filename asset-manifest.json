@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.adcae65f.css",
-    "main.js": "/static/js/main.6ff47992.js",
+    "main.css": "/static/css/main.9dd69ab2.css",
+    "main.js": "/static/js/main.dd9ba570.js",
     "static/media/tessbikes.png": "/static/media/tessbikes.31cdc04d003e004d886f.png",
     "static/media/bag.jpeg": "/static/media/bag.3d729d38b860538437d3.jpeg",
     "static/media/custom.jpeg": "/static/media/custom.6b23a5b0f7bde3ab5305.jpeg",
@@ -11,11 +11,11 @@
     "static/media/size-bike.jpeg": "/static/media/size-bike.900b62b58352e0abc867.jpeg",
     "static/media/tess-logo.svg": "/static/media/tess-logo.e2355d3d7ee1092631cdc41cccbb5e61.svg",
     "index.html": "/index.html",
-    "main.adcae65f.css.map": "/static/css/main.adcae65f.css.map",
-    "main.6ff47992.js.map": "/static/js/main.6ff47992.js.map"
+    "main.9dd69ab2.css.map": "/static/css/main.9dd69ab2.css.map",
+    "main.dd9ba570.js.map": "/static/js/main.dd9ba570.js.map"
   },
   "entrypoints": [
-    "static/css/main.adcae65f.css",
-    "static/js/main.6ff47992.js"
+    "static/css/main.9dd69ab2.css",
+    "static/js/main.dd9ba570.js"
   ]
 }
