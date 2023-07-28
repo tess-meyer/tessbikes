@@ -2,8 +2,14 @@ import React from "react";
 import logo from "../tess-logo.svg";
 import backgroundImg from "../mountains.avif";
 import desktopBackgroundImg from "../desktop-bg.avif";
+import { Link } from "react-scroll";
 
 const LandingPage = () => {
+
+  const handleClick = () => {
+  
+  }
+
   return (
     <div className="flex flex-col h-screen">
       <div
@@ -49,17 +55,20 @@ const LandingPage = () => {
         </div>
       </div>
 
-      <div className="h-1/2 bg-indigo-900 flex flex-col justify-center items-center sm:items-start sm:text-left">
+      <div className="h-1/2 bg-indigo-900 flex flex-col sm:items-start sm:text-left">
         <div className="text-white text-left sm:text-left px-4 text-shadow-lg text-5xl font-custom leading-8xl">
           Bespoke bike bags for your next adventure
         </div>
-        <div className="flex items-start justify-center sm:justify-start mt-4">
-          <button
-            className="bg-teal-500 hover:bg-teal-700 text-white text-xl font-custom py-2 px-4 cursor-pointer"
-            // onClick={handleClick}
+        <div class="flex items-start">
+          <Link
+          to="shop" 
+          smooth={true}
+          duration={500}
           >
-            SHOP BAGS
-          </button>
+            <button class="bg-teal-500 hover:bg-teal-700 text-white text-xl font-custom py-2 px-4 ml-4 mt-4 cursor-pointer">
+              SHOP BAGS
+            </button>
+          </Link>
         </div>
       </div>
     </div>
