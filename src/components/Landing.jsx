@@ -53,7 +53,7 @@ const LandingPage = () => {
         <div className="text-white text-left sm:text-left px-4 text-shadow-lg text-5xl font-custom leading-8xl">
           Bespoke bike bags for your next adventure
         </div>
-        <div className="flex justify-center sm:justify-start mt-4">
+        <div className="flex items-start justify-center sm:justify-start mt-4">
           <button
             className="bg-teal-500 hover:bg-teal-700 text-white text-xl font-custom py-2 px-4 cursor-pointer"
             // onClick={handleClick}
